@@ -1,36 +1,58 @@
+// Carousel
+
+const carouselImages = document.getElementById("carousel-images")
+
+getProducts().then(products => {
+    
+    const carouselProducts = products.slice(13,16);
+
+    carouselProducts.forEach(product => {
+    
+        carouselImages.innerHTML +=`
+            <a href="product/index.html?id=${product.id}">
+                <img src="${product.image.url}" alt="${product.title}">
+            </a>
+        `;
+    });
+});
+
+
+// Product List
 
 const productList = document.getElementById("product-list");
 
 getProducts().then(products => {
-  products.slice(0, 16).forEach(product => {
 
-    const productCard = document.createElement("article");
-    productCard.classList.add("product-card");
+    const productCards = products.slice(0,12);
 
-    let productPrice;
+    productCards.forEach(product => {
 
-    if (product.discountedPrice < product.price) {
+        let productPrice;
+
+        if (product.discountedPrice < product.price) {
         
-        productPrice =`
-            <p class="old-price">${product.price}</p>
-            <p class="discounted-price">${product.discountedPrice}</p>
-        `;
+            productPrice =`
+                <p class="old-price">${product.price}</p>
+                <p class="discount-price">${product.discountedPrice}</p>
+            `;
 
-    } else {
+        } else {    
 
-        productPrice =`
-            <p>${product.price}</p>
-        `;
+            productPrice =`
+                <p>${product.price}</p>
+            `;
 }
 
-    productCard.innerHTML = `
-        <a href="product/index.html?id=${product.id}">
-            <img src="${product.image.url}" alt="${product.title}">
-            <h3>${product.title}</h3>
-            <p>${productPrice}</p>
-        </a>
+    productList.innerHTML += `
+        <article class="product-card">
+            <a href="product/index.html?id=${product.id}">
+                <img src="${product.image.url}" alt="${product.title}">
+                <h3>${product.title}</h3>
+                ${productPrice}
+            </a>
+        </article>
     `;
 
-    productList.appendChild(productCard);
   });
 });
+
