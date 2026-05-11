@@ -82,6 +82,14 @@ a {
     cursor: pointer;
 }
 
+.old-price {
+    text-decoration: line-through;
+    color: var(--color-text);
+}
+
+.discount-price {
+    color: var(--color-primary);
+}
 
 /*Footer*/
 

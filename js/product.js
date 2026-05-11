@@ -8,17 +8,17 @@ const productDetails = document.getElementById("product-details");
 
 getProduct(id).then(product => {
 
-        const reviews = product.reviews.map(review => {
-        return `
+        let reviews = "";
+
+        product.reviews.forEach(review => {
+            reviews +=`
             <div class="review">
-                <h3>${review.username}</h3>
-                <p>Rating: ${review.rating}</p>
-                <p>${review.description}</p>
+            <h3>${review.username}</h3>
+            <p>${review.description}</p>
             </div>
         `;
-    }).join("");
+        });
 
-      
     let productPrice;
 
         if (product.discountedPrice < product.price) {
@@ -50,12 +50,29 @@ productDetails.innerHTML = `
         ${productPrice}
         <p>${product.description}</p>
         <div class="product-cta">
-            <button class=" cta cta-primary">Add to cart</button>
+            <button class=" cta cta-primary cta-cart">Add to cart</button>
             <button class=" cta cta-secondary">Share</button>
         </div>
     </section>
 `;
 
+const addToCartButton = document.querySelector(".cta-cart");
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+addToCartButton.addEventListener("click", addToCart);
+
+function addToCart() {
+
+    cart.push(product);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    console.log(cart);
+}
+
 });
+
+
 
 
