@@ -1,6 +1,7 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-const cartDetails = document.getElementById("cart");
+const cartDetails = document.getElementById("cart-details");
+const cartSummary = document.getElementById("cart-summary");
 const emptyCartButton = document.getElementById("empty-cart");
 
 
@@ -8,6 +9,7 @@ const emptyCartButton = document.getElementById("empty-cart");
 function showCart() {
 
     cartDetails.innerHTML = "";
+    cartSummary.innerHTML = "";
 
     cart.forEach(product => {
 
@@ -60,6 +62,23 @@ function showCart() {
         cartDetails.appendChild(cartItem);
 
     });
+
+        const total = cart.reduce((sum, product) => {
+
+            const price = product.discountedPrice < product.price
+                ? product.discountedPrice
+                : product.price;
+
+            return sum + parseFloat(price);
+        
+        }, 0);    
+
+        const totalText = document.createElement("p");
+
+        totalText.textContent = `Total: ${total.toFixed(2)} kr`;
+
+        cartSummary.appendChild(totalText);
+
 }
 
 
