@@ -32,16 +32,18 @@ function showCart() {
         const cartItem = document.createElement ("article");
 
         cartItem.innerHTML = `
-            <a href="../product/index.html?id=${product.id}">
+            <a class="cart-item" href="../product/index.html?id=${product.id}">
                 <img src="${product.image.url}" alt="${product.title}">
                 <h2>${product.title}</h2>
             </a>
 
-            ${productPrice}
-
             <button class="cta cta-secondary remove-button">
                 <i class="fa-regular fa-trash-can"></i>
             </button>
+
+            <div class="item-price">
+            ${productPrice}
+            </div>
         `;
 
         const removeButton = cartItem.querySelector(".remove-button");
@@ -66,6 +68,8 @@ function showCart() {
         const total = cart.reduce((sum, product) => {
 
             const price = product.discountedPrice < product.price
+
+
                 ? product.discountedPrice
                 : product.price;
 
@@ -75,7 +79,7 @@ function showCart() {
 
         const totalText = document.createElement("p");
 
-        totalText.textContent = `Total: ${total.toFixed(2)} kr`;
+        totalText.textContent = `Total: ${total.toFixed(2)}`;
 
         cartSummary.appendChild(totalText);
 
