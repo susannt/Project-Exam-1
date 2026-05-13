@@ -18,6 +18,12 @@ body {
     flex-direction: column;
 }
 
+h1,
+h2  {
+    text-align: center;
+    margin: 2rem;
+}
+
 img {
     border-radius: 3px;
     object-fit: cover;
