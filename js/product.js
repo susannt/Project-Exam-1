@@ -51,7 +51,7 @@ productDetails.innerHTML = `
         <p>${product.description}</p>
         <div class="product-cta">
             <button class=" cta cta-primary cta-cart">Add to cart</button>
-            <button class=" cta cta-secondary">Share</button>
+            <button class=" cta cta-secondary cta-share">Share</button>
         </div>
     </section>
 `;
