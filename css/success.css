@@ -1,5 +1,6 @@
 .fa-check {
     color: var(--color-primary);
+    font-size: 10rem;
 }
 
 .success {
@@ -13,3 +14,4 @@
     border-radius: 3px;
     box-shadow: 0 10px 20px var(--color-surface);
 }
+

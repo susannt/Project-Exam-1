@@ -6,8 +6,10 @@
     justify-content: center;
     gap: 1rem;
     padding: 3rem 5rem 5rem 5rem;
-    box-shadow: 0 10px 60px var(--color-surface);
-
+    margin: 2rem;
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+    border-color: var(--color-surface);
 }
 
 .carousel img {

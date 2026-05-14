@@ -34,7 +34,7 @@ main {
 }
 
 .logo-poppy {
-    height: 80px;
+    height: 70px;
 }
 
 header, 
@@ -43,26 +43,47 @@ footer {
     background-color: var(--color-surface);
 }
 
-header {
-    font-size: 1.5em;
+header,
+footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 200px;
-    padding: 0 50px;
+    padding: 1rem 3rem;
+}
+
+.desktop-nav,
+.footer-desktop {
+    display: none;
+}
+
+.mobile-nav {
+    display: block;
+}
+
+footer {
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav i {
+    font-size: 1.5rem;
+
+}
+
+nav i:hover {
+    cursor: pointer;
+    font-size: 2rem;
 }
 
 a {
     color: var(--color-text);
     text-decoration: none;
 }
-
-.fa-bars {
-    font-size: 2em;
-    color: var(--color-text);
-    margin: 10px 50px;
-}
-
 
 /*CTA*/
 
@@ -97,13 +118,7 @@ a {
     color: var(--color-primary);
 }
 
-/*Footer*/
 
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-}
 
 
 

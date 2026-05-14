@@ -1,0 +1,12 @@
+@media (min-width: 700px){
+    .desktop-nav,
+    .footer-desktop {
+        display: flex;
+    }
+    
+    .mobile-nav {
+        display: none;
+    }
+}
+
+
