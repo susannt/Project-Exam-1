@@ -3,7 +3,9 @@
     font-size: 10rem;
 }
 
-.success {
+.success,
+.login-form,
+.register-form {
     display: flex;
     flex-direction: column;
     align-items: center;
