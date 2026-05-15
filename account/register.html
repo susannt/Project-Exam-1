@@ -27,12 +27,12 @@
         <h1>Create Account</h1>
         <form class="register-form">
         <label for="Name">Name:</label>
-        <input type="text" name="name" id="name" placeholder="John Doe">
+        <input type="text" name="name" id="name" placeholder="John Doe" required>
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="johndoe@email.com">
+        <input type="email" name="email" id="email" placeholder="johndoe@email.com" required>
         <label for="password">Password</label>
-        <input type="text" name="password" id="password" placeholder="Password123">
-        <button class="cta cta-primary">Create Account</button>
+        <input type="password" name="password" id="password" placeholder="Password123" required>
+        <button type="submit" class="cta cta-primary">Create Account</button>
         </form>
     </main>
         <footer>
@@ -58,5 +58,6 @@
             </section>
         </footer>
     <script src="../js/api.js"></script>
+    <script src="../js/register.js"></script>
 </body>
 </html>
