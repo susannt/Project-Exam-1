@@ -1,14 +1,8 @@
-.fa-check {
-    color: var(--color-primary);
-    font-size: 10rem;
-}
-
 .success,
 .login-form,
 .register-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 100px auto;
     padding: 80px;
     gap: 2rem;
@@ -17,3 +11,11 @@
     box-shadow: 0 10px 20px var(--color-surface);
 }
 
+.success {
+    align-items: center;
+}
+
+.fa-check {
+    color: var(--color-primary);
+    font-size: 10rem;
+}
