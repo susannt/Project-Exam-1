@@ -18,7 +18,7 @@ async function getProduct(id) {
   return product.data;
 }
 
-//Register account
+// Register account
 
 async function registerAccount(name, email, password) {
   const response = await fetch(registerUrl, {
@@ -33,6 +33,24 @@ async function registerAccount(name, email, password) {
     })
   });
 
+  const result = await response.json();
+  return result;
+}
+
+// Login account
+
+async function loginAccount(email, password) {
+  const response = await fetch(loginUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body:JSON.stringify({
+      email,
+      password
+    })
+  });
+  
   const result = await response.json();
   return result;
 }
