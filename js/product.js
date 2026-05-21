@@ -4,7 +4,7 @@ const id = params.get("id");
 
 const productDetails = document.getElementById("product-details");
 
-productDetails.innerHTML = "<p>Loading products...</p>";
+productDetails.innerHTML = "<p>Loading product...</p>";
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let currentProduct = null;
@@ -56,7 +56,7 @@ productDetails.innerHTML = `
         <p class="description">${product.description}</p>    
         <div class="product-cta">
             <button class=" cta cta-primary cta-cart">Add to cart</button>
-            <button class=" cta cta-secondary cta-share">Share</button>
+            <button class=" cta cta-secondary cta-share"><i class="fa-solid fa-share"></i></button>
         </div>
     </section>
 
@@ -65,6 +65,16 @@ productDetails.innerHTML = `
         ${reviews}
     </section>
 `;
+
+const shareButton = document.querySelector(".cta-share");
+
+shareButton.addEventListener("click", shareProduct)
+
+function shareProduct() {
+    navigator.clipboard.writeText(window.location.href);
+
+    alert("Product link copied!");
+}
 
 
 const addToCartButton = document.querySelector(".cta-cart");
