@@ -4,18 +4,30 @@
     display: flex;
     flex-direction: column;
     margin: 100px auto;
-    padding: 80px;
-    gap: 2rem;
-    max-width: 600px;
+    padding: 100px;
+    max-width: 500px;
     border-radius: 3px;
     box-shadow: 0 10px 20px var(--color-surface);
 }
 
+.login-form,
+.register-form {
+    gap: 1rem;
+}
+
+.login-form input,
+.register-form input {
+    border-radius: 3px;
+    height: 30px;
+}
+
 .success {
     align-items: center;
+    gap: 2rem;
 }
 
 .fa-check {
     color: var(--color-primary);
     font-size: 10rem;
 }
+

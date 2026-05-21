@@ -42,6 +42,22 @@
     #product-details {
         grid-template-columns: 400px 1fr;
     }
+
+      /* checkout */
+    #checkout-form {
+        margin: 2rem;
+        grid-template-columns: 1fr;
+        margin-bottom: 15rem;
+    }
+
+    .cta-submit {
+        margin-top: 4rem;
+    }
+
+    .delivery-form input {
+        height: 20px;
+    }
+
 }
 
 
@@ -140,6 +156,42 @@
     .discount-price,
     .old-price {
         font-size: 1rem;
+    }
+
+    /* authentification */
+
+    .success,
+    .login-form,
+    .register-form {
+        margin: 2rem;
+        padding: 80px;
+        gap: 1rem;
+        max-width: 400px;
+        font-size: 1rem;
+    }
+
+    .fa-check {
+        font-size: 6rem;
+    }
+
+    .login-form input,
+    .register-form input {
+        height: 20px;
+    }
+
+    .login-form label,
+    .register-form label {
+        font-size: 0.8rem;
+    }
+
+    .success h1 {
+        font-size: 1.25rem;
+    }
+
+    .success img {
+        height: 60px;
+        width: 60px;
+    
     }
 }
 
