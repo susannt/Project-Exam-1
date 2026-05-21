@@ -17,6 +17,17 @@
     height: 400px;
 }
 
+.carousel-content {
+    position: relative;
+}
+
+.cta-view{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-size: 1.25rem;
+}
+
 
 /*Product Card*/
 

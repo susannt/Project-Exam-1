@@ -31,6 +31,10 @@ function showProduct(index) {
             <a href="product/index.html?id=${product.id}">
                 <img src="${product.image.url}" alt="${product.title}">
             </a>
+
+            <a href="product/index.html?id=${product.id}"class="cta cta-secondary cta-view">
+                View
+            </a>
         `;
 }
 
