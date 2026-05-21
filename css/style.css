@@ -52,12 +52,22 @@ header,
     padding: 1rem 3rem;
 }
 
+.footer-desktop ul {
+    list-style-type: none;
+    display: flex;
+    align-self: flex-end;
+    gap: 1rem;
+}
 
+.socials {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
 
 .mobile-nav {
     display: none;
 }
-
 
 nav {
     display: flex;
@@ -66,11 +76,11 @@ nav {
 }
 
 nav i {
-    font-size: 1.5rem;
-
+    font-size: 1.7rem;
 }
 
-nav i:hover {
+nav i:hover,
+.socials i:hover {
     cursor: pointer;
     font-size: 2rem;
 }
