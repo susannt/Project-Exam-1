@@ -72,7 +72,7 @@ getProducts().then(products => {
         } else {    
 
             productPrice =`
-                <p>${product.price}</p>
+                <p class="price">${product.price}</p>
             `;
 }
 

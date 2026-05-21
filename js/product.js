@@ -24,8 +24,8 @@ getProduct(id).then(product => {
         if (product.discountedPrice < product.price) {
         
             productPrice =`
-                <p class="old-price">${product.price}</p>
-                <p class="discount-price">${product.discountedPrice}</p>
+                <p class="old-price price">${product.price}</p>
+                <p class="discount-price price">${product.discountedPrice}</p>
             `;
 
         } else {    
@@ -38,21 +38,26 @@ getProduct(id).then(product => {
 productDetails.innerHTML = `
     <section class="product-image">
         <img src="${product.image.url}" alt="${product.title}">
-        <p>Rating: ${product.rating}</p>
-        <div class="reviews">
-            ${reviews}
-        </div>
     </section>
     
-    <section class="product-details">    
+    <section class="product-info">
         <h1>${product.title}</h1>
-        <p>Tags: ${product.tags.join(", ")}</p>
-        ${productPrice}
-        <p>${product.description}</p>
+        <div class="tags">Category: ${product.tags.join(", ")}</div>
+        <div class="rating">
+            ${'<i class="fa-solid fa-star"></i>'.repeat(product.rating)}${'<i class="fa-regular fa-star"></i>'.repeat(5 - product.rating)}
+            (${product.rating}/5)
+        </div>
+        <div>${productPrice}</div>
+        <p class="description">${product.description}</p>    
         <div class="product-cta">
             <button class=" cta cta-primary cta-cart">Add to cart</button>
             <button class=" cta cta-secondary cta-share">Share</button>
         </div>
+    </section>
+
+    <section class="reviews">
+        <h2>Reviews</h2>
+        ${reviews}
     </section>
 `;
 
