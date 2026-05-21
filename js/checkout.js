@@ -6,7 +6,16 @@ function completePurchase(event) {
 
     event.preventDefault();
 
-    localStorage.removeItem("cart");
+    const button = document.querySelector(".cta-submit");
 
-    window.location.href = "../success/index.html";
+    
+    button.disabled = true;
+    button.textContent = "Processing...";
+
+    setTimeout(() => {
+
+        localStorage.removeItem("cart");
+
+        window.location.href = "../success/index.html";
+    },500);
 }

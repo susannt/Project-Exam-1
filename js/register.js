@@ -12,7 +12,7 @@ registerForm.addEventListener("submit", async function(event) {
     console.log(result);
 
     if (result.data) {
-        alert("Account created!");
+        alert("Acc created!");
         window.location.href = "./login.html";
     } else {
         alert(result.errors?.[0]?.message || "Could not create account");

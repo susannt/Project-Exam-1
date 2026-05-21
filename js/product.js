@@ -1,12 +1,17 @@
 const queryString = document.location.search;
-
 const params = new URLSearchParams(queryString);
-
 const id = params.get("id");
 
 const productDetails = document.getElementById("product-details");
 
+productDetails.innerHTML = "<p>Loading products...</p>";
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let currentProduct = null;
+
 getProduct(id).then(product => {
+
+    currentProduct = product;
 
         let reviews = "";
 
@@ -61,22 +66,25 @@ productDetails.innerHTML = `
     </section>
 `;
 
-const addToCartButton = document.querySelector(".cta-cart");
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const addToCartButton = document.querySelector(".cta-cart");
 
 addToCartButton.addEventListener("click", addToCart);
 
-function addToCart() {
+})
+.catch(error => {
+    productDetails.innerHTML = "<p>Failed to load product.</p>"
+    console.error(error);
+});
 
-    cart.push(product);
+function addToCart() {
+    cart.push(currentProduct);
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
     console.log(cart);
 }
 
-});
 
 
 

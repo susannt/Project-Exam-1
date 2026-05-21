@@ -11,6 +11,12 @@ function showCart() {
     cartDetails.innerHTML = "";
     cartSummary.innerHTML = "";
 
+        if (cart.length === 0) {
+            cartDetails.innerHTML = "<p>Your cart is empty</p>";
+            cartSummary.innerHTML = "";
+            return;
+    }
+
     cart.forEach(product => {
 
         let productPrice;

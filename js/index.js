@@ -7,12 +7,20 @@ const nextButton = document.querySelector(".next-button");
 let carouselProducts = [];
 let currentIndex = 0;
 
+carouselImages.innerHTML = "<p>Loading products...</p>";
+
 getProducts().then(products => {
     
     carouselProducts = products.slice(13,16);
 
     showProduct(currentIndex);
 
+
+}).catch(error => {
+
+    carouselImages.innerHTML = `
+        <p>Failed to load products.</p>
+    `;
 });
 
 function showProduct(index) {
@@ -54,7 +62,11 @@ previousButton.addEventListener("click", () => {
 
 const productList = document.getElementById("product-list");
 
+productList.innerHTML = "<p>Loading products...</p>"
+
 getProducts().then(products => {
+
+    productList.innerHTML = "";
 
     const productCards = products.slice(0,12);
 
@@ -87,5 +99,11 @@ getProducts().then(products => {
     `;
 
   });
+
+}).catch(error => {
+
+    productList.innerHTML = `
+        <p>Failed to load products.</p>
+    `;
 });
 
