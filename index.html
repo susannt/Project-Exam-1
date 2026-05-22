@@ -15,7 +15,7 @@
 <body>
     <header>
         <a href="index.html">
-            <img src="img/poppy_logo.svg" alt="Poppy Logo" class="logo-poppy"/>
+            <img src="img/poppy_logo.svg" alt="Poppy Logo" class="logo-poppy">
         </a>
         <nav class="desktop-nav">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -25,14 +25,17 @@
     </header>
     <main>
         <h1>Discover Your Style</h1>
-        <section class="carousel">
+        <div class="carousel">
             <button class="previous-button cta cta-secondary"><i class="fa-solid fa-angle-left"></i></button>
             <div class="carousel-content">
                 <div id="carousel-images"></div> 
             </div>
             <button class="next-button cta cta-secondary"><i class="fa-solid fa-angle-right"></i></button>
-        </section>
-        <section id="product-list"></section> 
+        </div>
+        <section>
+            <h2>Products</h2>
+            <div id="product-list"></div>
+        </section> 
     </main>
         <footer>
             <nav class="mobile-nav">
@@ -40,9 +43,9 @@
                 <a href="account/login.html"><i class="fa-regular fa-user"></i></a>
                 <a href="cart/index.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </nav>
-            <section class="footer-desktop">
+            <div class="footer-desktop">
                 <a href="index.html">
-                    <img src="img/poppy-flower1.svg" alt="Poppy flower logo" class="logo-flower"/>
+                    <img src="img/poppy-flower1.svg" alt="Poppy flower logo" class="logo-flower">
                 </a>
                 <ul>
                     <li>&copy; 2026 Poppy</li>
@@ -54,7 +57,7 @@
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-youtube"></i>
                 </div>
-            </section>
+            </div>
         </footer>
     <script src="js/api.js"></script>
     <script src="js/index.js"></script>
