@@ -1,11 +1,11 @@
 #cart {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 3rem auto;
 }
 
 #cart-details article {
     display: grid;
-    grid-template-columns: 2fr 1fr 60px;
+    grid-template-columns: 150px 1fr 60px;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
@@ -30,8 +30,10 @@
 .cart-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
+
+
 
 .discount-price {
    color: var(--color-text);

@@ -95,7 +95,7 @@
     }
 
     h2 {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     nav i {
@@ -112,14 +112,20 @@
     }
 
     .carousel img {
-        width: 500px;
-        height: 250px;
+        width: 250px;
+        height: 150px;
     }
 
     .previous-button,
     .next-button {
         font-size: 0.5rem;
         padding: 10px;
+    }
+
+    .cta-view {
+        font-size: 0.80rem;
+        bottom: 15px;
+        left: 15px;
     }
 
     #product-list {
@@ -135,8 +141,8 @@
     }
 
     .product-image img {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
     }
 
 
@@ -159,8 +165,9 @@
     .item-price,
     .discount-price,
     .old-price {
-        font-size: 1rem;
+        font-size: 0.80rem;
     }
+
 
     /* authentification */
 
