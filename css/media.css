@@ -175,7 +175,7 @@
     .login-form,
     .register-form {
         margin: 2rem;
-        padding: 80px;
+        padding: 50px;
         gap: 1rem;
         max-width: 400px;
         font-size: 1rem;
