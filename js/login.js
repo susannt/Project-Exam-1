@@ -15,7 +15,7 @@ loginForm.addEventListener("submit", async function(event) {
 
         localStorage.setItem("token", result.data.accessToken);
 
-        window.location.href ="/";
+        window.location.href ="../index.html";
     } else {
         alert(result.errors?.[0]?.message || "Login failed");
     }
