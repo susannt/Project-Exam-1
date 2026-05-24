@@ -168,6 +168,11 @@
         font-size: 0.80rem;
     }
 
+    .remove-button {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
 
     /* authentification */
 
